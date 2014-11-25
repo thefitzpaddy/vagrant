@@ -3,7 +3,7 @@ class mongo
     exec 
     { 
         'mongo-10gen-key':
-            command => 'apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10',
+            command => 'sudo apt-key add /vagrant/puppet/modules/mongo/manifests/10gen-mongo-gpg-key.asc',
     }
     
     exec 

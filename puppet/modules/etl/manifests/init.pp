@@ -16,7 +16,7 @@ class etl
   }
 
   exec { "add-r-source":
-    command => 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu precise/" >> /etc/apt/sources.list && sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9',
+    command => 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu precise/" >> /etc/apt/sources.list && sudo apt-key add /vagrant/puppet/modules/etl/manifests/10gen-rsource-gpg-key.asc',
     notify  => Exec['apt-get update']
   }
 
